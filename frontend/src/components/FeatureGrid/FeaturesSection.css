@@ -1,0 +1,228 @@
+.features-section {
+  width: 100%;
+  border-top: 1px solid #0F0F0F;
+  background: #090d12;
+  color: #ffffff;
+}
+
+.features-container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px 32px;
+}
+
+/* ============================== HEADING ================================ */
+.features-heading {
+  width: 100%;
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-heading h2 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.features-heading p {
+  margin: 12px 0 0;
+  font-size: 16px;
+  line-height: 1.625;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ============================== GRID ================================ */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ============================== CARD ================================ */
+.feature-card {
+  position: relative;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px 24px 24px;
+  background: #090d12;
+  overflow: visible;
+}
+
+/* ============================== CARD GLOW ================================ */
+.feature-card-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(50% 80% at 25% 0%, rgba(255, 255, 255, 0.08), transparent);
+  opacity: 0.8;
+}
+
+/* ============================== BORDERS ================================ */
+.feature-border {
+  position: absolute;
+  background: #ffde5961;
+  pointer-events: none;
+}
+
+.feature-border-left {
+  top: -16px;
+  bottom: -16px;
+  left: 0;
+  width: 1px;
+}
+
+.feature-border-right {
+  top: -16px;
+  bottom: -16px;
+  right: 0;
+  width: 1px;
+}
+
+.feature-border-top {
+  left: -16px;
+  right: -16px;
+  top: 0;
+  height: 1px;
+}
+
+.feature-border-bottom {
+  left: -16px;
+  right: -16px;
+  bottom: 0;
+  height: 1px;
+}
+
+/* ============================== CORNER PLUS ================================ */
+.corner-plus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.corner-plus span {
+  position: absolute;
+  display: block;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.corner-plus span:first-child {
+  width: 14px;
+  height: 1px;
+  top: 6px;
+  left: 0;
+}
+
+.corner-plus span:last-child {
+  width: 1px;
+  height: 14px;
+  top: 0;
+  left: 6px;
+}
+
+/* ============================== ICON ================================ */
+.feature-icon {
+  position: relative;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.feature-icon svg {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  stroke-width: 1.5;
+}
+
+/* ============================== CONTENT ================================ */
+.feature-content {
+  position: relative;
+  z-index: 2;
+}
+
+.feature-content h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.feature-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ============================== HOVER ================================ */
+.feature-card {
+  transition: transform 250ms ease, background-color 250ms ease;
+}
+
+.feature-card:hover {
+  background: #0c1118;
+}
+
+.feature-card:hover .feature-icon {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ============================== TABLET ================================ */
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-heading h2 {
+    font-size: 40px;
+  }
+}
+
+/* ============================== MOBILE ================================ */
+@media (max-width: 600px) {
+  .features-container {
+    padding: 40px 20px;
+    gap: 36px;
+  }
+
+  .features-heading h2 {
+    font-size: 32px;
+  }
+
+  .features-heading p {
+    font-size: 14px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .feature-card {
+    min-height: 240px;
+    padding: 28px 20px 22px;
+  }
+}

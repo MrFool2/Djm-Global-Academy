@@ -1,0 +1,297 @@
+.overview-frame {
+  --ov-color: #ffffff;
+  --ov-pad: 14px;
+  --ov-radius: 38px;
+
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--ov-pad);
+
+  box-sizing: border-box;
+  border-radius: var(--ov-radius);
+}
+
+
+/* =========================================
+   SVG BORDER
+========================================= */
+
+.overview-frame__border {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 5;
+
+  overflow: visible;
+}
+
+.overview-frame__border path {
+  fill: none;
+
+  stroke-width: 0.8;
+
+  vector-effect: non-scaling-stroke;
+
+  stroke-linecap: round;
+}
+
+
+/* =========================================
+   MEDIA CONTAINER
+========================================= */
+
+.overview-frame__media {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: calc(
+    var(--ov-radius) - var(--ov-pad)
+  );
+
+  background: #090d12;
+}
+
+
+/* =========================================
+   IMAGE / VIDEO
+========================================= */
+
+.overview-frame__photo {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 663 / 385;
+
+  object-fit: cover;
+
+  background: #090d12;
+
+  animation: overviewFade 0.5s ease;
+}
+
+
+@keyframes overviewFade {
+  from {
+    opacity: 0.35;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.overview-frame__arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  color: white;
+
+  font-size: 30px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  z-index: 6;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.overview-frame__arrow:hover {
+  background: rgba(0, 0, 0, 0.75);
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+
+.overview-frame__arrow--left {
+  left: 16px;
+}
+
+
+.overview-frame__arrow--right {
+  right: 16px;
+}
+
+
+/* =========================================
+   MUTE BUTTON
+========================================= */
+
+.overview-frame__mute {
+  position: absolute;
+
+  right: 16px;
+  bottom: 16px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  color: white;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  z-index: 6;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.overview-frame__mute:hover {
+  background: rgba(0, 0, 0, 0.75);
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   DOTS
+========================================= */
+
+.overview-frame__dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 16px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  z-index: 6;
+}
+
+
+.overview-frame__dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.overview-frame__dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+.overview-frame__dot.active {
+  width: 22px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .overview-frame {
+    --ov-pad: 10px;
+    --ov-radius: 28px;
+  }
+
+
+  .overview-frame__arrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 24px;
+  }
+
+
+  .overview-frame__arrow--left {
+    left: 10px;
+  }
+
+
+  .overview-frame__arrow--right {
+    right: 10px;
+  }
+
+
+  .overview-frame__mute {
+    right: 10px;
+    bottom: 10px;
+
+    width: 34px;
+    height: 34px;
+  }
+
+
+  .overview-frame__dots {
+    bottom: 12px;
+  }
+
+}
