@@ -1,5 +1,6 @@
 import React from "react"; 
 import "./FeaturesSection.css"; 
+import CornerPlus from "../CornerPlus/CornerPlus";
 const features = [ 
     { 
         title: "Academic Excellence", 
@@ -88,9 +89,8 @@ const FeaturesSection = () => {
                             <div className="feature-border feature-border-top" /> 
                             <div className="feature-border feature-border-bottom" /> 
                             {/* Corner plus */} 
-                            <div className="corner-plus"> 
-                                <span /> <span /> 
-                            </div> 
+                            <CornerPlus />
+                            
                             {/* Icon */} 
                             <div className="feature-icon"> 
                                 {feature.icon} 

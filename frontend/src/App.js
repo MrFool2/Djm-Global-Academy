@@ -5,6 +5,7 @@ import SliderVideo1 from './Assests/ImageSlider/video/SliderVideo.mp4';
 import FeatureGrid from './components/FeatureGrid/FeaturesSection.jsx';
 import About from './components/About/About.jsx';
 import './components/About/About.css';
+import Footer from './components/Footer/Footer.jsx';
 const videos = [
     {
       src: "https://hacktoskill.com/opsteam/AiBuilderCup/AiBuilderVideo.webm",
@@ -36,6 +37,9 @@ function App() {
       </section>
       <section className="FeatureGrid">
         <FeatureGrid />
+      </section> 
+      <section className="Footer">
+        <Footer />
       </section>
       
     </div>
