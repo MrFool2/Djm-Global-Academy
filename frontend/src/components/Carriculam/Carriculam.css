@@ -1,0 +1,505 @@
+/* =========================================================
+   PARTICIPANTS SECTION
+   ========================================================= */
+
+.participants-section {
+  position: relative;
+  width: 100%;
+
+  padding: 3rem 0;
+
+  background: #090d12;
+  color: #fff;
+
+  overflow: hidden;
+}
+
+/* Subtle background glow */
+
+.participants-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 350px;
+
+  top: -200px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(50, 120, 255, 0.12),
+    transparent 70%
+  );
+
+  filter: blur(45px);
+
+  pointer-events: none;
+}
+
+.participants-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+/* =========================================================
+   TYPEWRITER
+   ========================================================= */
+
+.typewriter-lockup {
+  margin-bottom: 2.5rem;
+  justify-items: center;
+}
+
+.typewriter-title {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(1.7rem, 3vw, 3rem);
+
+  font-weight: 600;
+
+  line-height: 1.15;
+  
+  letter-spacing: -0.035em;
+}
+
+.typewriter-line {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0.5rem 0 0;
+
+  color: #d4d4d4;
+
+  font-size: clamp(1.3rem, 2.5vw, 2.4rem);
+
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.02em;
+
+  min-height: 1.3em;
+}
+
+/* Cursor */
+
+.typewriter-title__cursor {
+  display: inline-block;
+
+  width: 2px;
+  height: 1em;
+
+  margin-left: 5px;
+
+  vertical-align: -0.12em;
+
+  background: #fff;
+
+  animation: typewriterBlink 0.8s steps(1) infinite;
+}
+
+@keyframes typewriterBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.audience-grid {
+  width: 100%;
+}
+
+.audience-carousel {
+    
+  display: flex;
+  justify-content: center;
+  
+
+  gap: 18px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.audience-card {
+  position: relative;
+
+  min-height: 390px;
+
+  overflow: hidden;
+
+  padding: 30px;
+
+  border: 1px solid #f7e6051f;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  isolation: isolate;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.audience-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #ffde59;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(50, 100, 255, 0.08);
+}
+
+/* =========================================================
+   CARD IMAGES
+   ========================================================= */
+
+.audience-card__pixels {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.35;
+
+  mix-blend-mode: screen;
+
+  pointer-events: none;
+
+  z-index: -2;
+}
+
+.audience-card__glow {
+  position: absolute;
+
+  right: -20%;
+  bottom: -20%;
+
+  width: 80%;
+  height: 80%;
+
+  object-fit: contain;
+
+  opacity: 0.45;
+
+  mix-blend-mode: screen;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.audience-card:hover .audience-card__glow {
+  transform: scale(1.08);
+
+  opacity: 0.6;
+}
+
+/* People image */
+
+.audience-card__people {
+  position: absolute;
+
+  right: -15px;
+  bottom: -5px;
+
+  width: 55%;
+  max-height: 90%;
+
+  object-fit: contain;
+  object-position: bottom right;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  opacity: 0.9;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.audience-card:hover .audience-card__people {
+  transform: scale(1.03);
+
+  opacity: 1;
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.audience-card__content {
+  position: relative;
+
+  z-index: 2;
+  justify-content: center;
+
+  max-width: 75%;
+}
+
+.audience-card__title {
+  margin: 0 0 14px;
+
+  color: #fff;
+
+  font-size: clamp(1.3rem, 2vw, 3rem);
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+  
+}
+
+.audience-card__body {
+  margin: 0;
+
+  max-width: 460px;
+
+  color: #b8b8b8;
+
+  font-size: 18px;
+
+  line-height: 1.65;
+
+  font-weight: 400;
+}
+
+/* Dark gradient over image */
+
+.audience-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.12) 35%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+
+.carousel-dots {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.3);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.65);
+
+  transform: scale(1.15);
+}
+
+.carousel-dot.is-active {
+  width: 24px;
+
+  border-radius: 10px;
+
+  background: #fff;
+}
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
+.participants-disclaimer {
+  max-width: 1103px;
+
+  margin: 2rem auto 0;
+
+  color: #d4d4d4;
+
+  font-size: 12px;
+
+  line-height: 1.44;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .audience-carousel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .audience-card:last-child {
+    display: none;
+  }
+
+  .audience-card {
+    min-height: 360px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .participants-section {
+    padding: 3rem 0;
+  }
+
+  .participants-container {
+    padding: 0 16px;
+  }
+
+  .typewriter-lockup {
+    margin-bottom: 1.75rem;
+  }
+
+  
+  .audience-card {
+      display: flex;
+      
+      min-height: 400px;
+      
+      padding: 24px;
+      
+      border-radius: 16px;
+    }
+    
+    .audience-carousel {
+      display: flex;
+      flex-flow: column ;
+      align-items: center;
+      
+    }
+  .audience-card {
+    width: 80%;
+  }
+  .acudience-card__title {
+    font-size: clamp(1.3rem, 6vw, 3rem);
+  }
+  .audience-card__content {
+    max-width: 85%;
+    
+  }
+
+  .audience-card__people {
+    width: 65%;
+  }
+
+  .audience-card__body {
+    font-size: 1.5rem;
+  }
+
+  .participants-disclaimer {
+    margin-top: 1.75rem;
+
+    text-align: left;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+  .participants-container {
+    padding: 0 14px;
+  }
+
+  .audience-card {
+    min-height: 370px;
+
+    padding: 20px;
+  }
+
+  .audience-card__content {
+    max-width: 100%;
+  }
+
+  .audience-card__title {
+    font-size: 1.35rem;
+  }
+
+  .audience-card__people {
+    width: 70%;
+  }
+}

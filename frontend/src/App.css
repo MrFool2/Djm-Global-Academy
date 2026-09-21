@@ -13,8 +13,12 @@
   font-family: 'Poppins', sans-serif;
 
 }
+.header-nav
+{
+  margin-bottom: 6rem;
+}
 .Navbar{
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   margin-bottom: 3rem;

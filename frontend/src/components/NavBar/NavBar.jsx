@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../../Assests/NavLogo/logo.svg";
+import Logo from "../logo/Logo";
 import "./NavBar.css";
 
 function NavList({ mobile = false }) {
@@ -55,7 +55,9 @@ const NavBar = () => {
       <div className="dock-container">
 
         <a href="#home" className="dock-logo">
-          DJM Global Academy
+          
+         <Logo width="190px" height="auto" />
+          
         </a>
 
         <div className="dock-desktop-nav">

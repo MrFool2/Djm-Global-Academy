@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import CornerPlus from "../CornerPlus/CornerPlus";
+import Logo from "../logo/Logo";
 
 const Footer = () => {
   return (
@@ -18,11 +19,9 @@ const Footer = () => {
           <div className="footer-brand">
 
             <a href="/" className="footer-logo">
-              <div className="footer-logo-mark">
-                DJM
-              </div>
+              
 
-              <span>DJM Global Academy</span>
+                <Logo width="250px" height="auto" />
             </a>
 
             <p className="footer-description">
