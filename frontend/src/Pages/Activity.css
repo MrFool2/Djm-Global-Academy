@@ -1,0 +1,5 @@
+.Activity{
+    display: flex;
+    flex-direction: column;
+
+}

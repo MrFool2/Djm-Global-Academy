@@ -46,9 +46,7 @@ function Router() {
       <section className="FeatureGrid">
         <FeatureGrid />
       </section> 
-      <section className="Footer">
-        <Footer />
-      </section>
+      
       
     </>
   );

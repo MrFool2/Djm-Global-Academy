@@ -1,5 +1,5 @@
 import Masonry from "../components/Acativity/MasonryGallery";
-
+import "./Activity.css";
 
 const items= [
    { id:"1",
@@ -171,18 +171,20 @@ function Activity()  {
   return (
 
     <div className="Activity">
-        <Masonry
-          items= { items}
-          ease="power3.out"
-          duration= { 0.6}
-          stagger= { 0.05}
-          animateFrom="bottom"
-          scaleOnHover
-          hoverScale= { 0.95}
-          blurToFocus
-          colorShiftOnHover= {false}
-        />
+      <div className="Activity-gallery">
+          <Masonry
+            items= { items}
+            ease="power3.out"
+            duration= { 0.6}
+            stagger= { 0.05}
+            animateFrom="bottom"
+            scaleOnHover
+            hoverScale= { 0.95}
+            blurToFocus
+            colorShiftOnHover= {false}
+            />
 
+          </div>
     </div>
   );
 }

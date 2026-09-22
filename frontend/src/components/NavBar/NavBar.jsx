@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { NavLink } from "react-router-dom";
 import Logo from "../logo/Logo";
 import "./NavBar.css";
 
@@ -7,27 +8,27 @@ function NavList({ mobile = false }) {
   return (
     <ul className={mobile ? "dock-nav dock-nav-mobile" : "dock-nav"}>
       <li>
-        <a href="#home">Home</a>
+        <NavLink to="/">Home</NavLink>
       </li>
 
       <li>
-        <a href="#about">About</a>
+        <NavLink to="/about">About</NavLink>
       </li>
 
       <li>
-        <a href="#academics">Academics</a>
+        <NavLink to="/academics">Academics</NavLink>
       </li>
 
       <li>
-        <a href="#academics">Activity</a>
+        <NavLink to="/activity">Activity</NavLink>
       </li>
 
       <li>
-        <a href="#facilities">Facilities</a>
+        <NavLink to="/facilities">Facilities</NavLink>
       </li>
 
       <li>
-        <a href="#contact">Contact</a>
+        <NavLink to="/contact">Contact</NavLink>
       </li>
     </ul>
   );
