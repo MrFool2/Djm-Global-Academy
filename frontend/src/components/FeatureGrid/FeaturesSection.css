@@ -30,14 +30,27 @@
   line-height: 1.1;
   font-weight: 500;
   letter-spacing: -0.025em;
-  color: #ffffff;
+  
+  background:
+    linear-gradient(
+      90deg,
+      #20c9ff 0%,
+      #58d68d 35%,
+      #d4e63b 65%,
+      #ff9d00 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
 }
 
 .features-heading p {
   margin: 12px 0 0;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.625;
-  color: rgba(255, 255, 255, 0.55);
+  color: #dad5d5;
 }
 
 /* ============================== GRID ================================ */
@@ -134,7 +147,7 @@
 
 .feature-content h3 {
   margin: 0 0 8px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.4;
   font-weight: 500;
   color: #ffffff;
@@ -142,9 +155,9 @@
 
 .feature-content p {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.55);
+  color: #ece5e5;
 }
 
 /* ============================== HOVER ================================ */

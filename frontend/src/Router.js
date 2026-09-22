@@ -7,6 +7,7 @@ import About from './components/About/About.jsx';
 import Carriculam from './components/Carriculam/Carriculam.jsx';
 import './components/About/About.css';
 import Footer from './components/Footer/Footer.jsx';
+import WelcomeSection from './components/welcomeSection/WelcomeSection.jsx';
 const videos = [
     {
       src: "https://hacktoskill.com/opsteam/AiBuilderCup/AiBuilderVideo.webm",
@@ -36,8 +37,8 @@ function Router() {
           interval={5000}
         />
       </section>
-      <section id="About" className="About">
-        <About />
+      <section className='welcome'>
+        <WelcomeSection />
       </section>
       <section id="Carriculam" className="Carriculam">
         <Carriculam />

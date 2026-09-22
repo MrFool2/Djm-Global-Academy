@@ -1,0 +1,510 @@
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+
+  background:  #090d12;
+  color: #fff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.welcome-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1600px;
+
+  min-height: 700px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 58% 42%;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   LEFT IMAGE
+========================================= */
+
+.welcome-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 700px;
+    margin-top:20%;
+  overflow: hidden;
+}
+
+
+/* School image */
+
+.welcome-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  filter:
+    grayscale(40%)
+    brightness(1.5)
+;
+
+  transform: scale(1.02);
+
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+
+/* =========================================
+   BLACK MASK
+========================================= */
+
+.welcome-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: #0000006b;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   GRADIENT MASK
+   Makes image disappear into black
+========================================= */
+
+.welcome-image-gradient {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.15) 35%,
+      rgba(0, 0, 0, 0.65) 75%,
+      #090d12 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Bottom fade */
+
+.welcome-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 35%;
+
+  background:
+    linear-gradient(
+      to top,
+      #090d12 0%,
+      rgba(180, 164, 164, 0) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.welcome-content {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 80px 70px 80px 45px;
+
+  background: #090d12;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SMALL TITLE
+========================================= */
+
+.welcome-small-title {
+  margin: 0 0 12px;
+
+  font-size: clamp(1.3rem, 2vw, 2rem);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  letter-spacing: -0.02em;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.welcome-title {
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: clamp(3rem, 5vw, 5.5rem);
+
+  line-height: 0.95;
+
+  font-weight: 700;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* Gradient "DJM Global" */
+
+.welcome-title span {
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      90deg,
+      #20c9ff 0%,
+      #58d68d 35%,
+      #d4e63b 65%,
+      #ff9d00 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+}
+
+
+/* Academy */
+
+.welcome-title strong {
+  display: block;
+
+  color: #fff;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   COLOR LINE
+========================================= */
+
+.welcome-line {
+  width: 160px;
+  height: 4px;
+
+  margin: 32px 0 30px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #20c9ff,
+      #62d38a,
+      #d8e632,
+      #ff9d00
+    );
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.welcome-description {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 1.05rem;
+
+  line-height: 1.75;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================
+   POINTS
+========================================= */
+
+.welcome-points {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+
+  margin-top: 38px;
+}
+
+
+.welcome-point {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+
+/* Gradient dot */
+
+.welcome-point-dot {
+  flex-shrink: 0;
+
+  width: 12px;
+  height: 12px;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #20c9ff,
+      #d8e632,
+      #ff9d00
+    );
+
+  box-shadow:
+    0 0 14px rgba(32, 201, 255, 0.25);
+}
+
+
+.welcome-point h3 {
+  margin: 0 0 5px;
+
+  color: #fff;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+}
+
+
+.welcome-point p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.welcome-container:hover .welcome-image {
+  transform: scale(1.04);
+
+  filter:
+    grayscale(100%)
+    brightness(0.5)
+    contrast(1.1);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .welcome-container {
+    grid-template-columns: 50% 50%;
+  }
+
+  .welcome-image-wrapper {
+    height: 650px;
+  }
+
+  .welcome-content {
+    padding: 60px 40px;
+  }
+
+  .welcome-title {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+  }
+
+  .welcome-description {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .welcome-section {
+    min-height: auto;
+  }
+
+  .welcome-container {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+
+  /* Image becomes background-like top section */
+
+  .welcome-image-wrapper {
+    width: 100%;
+    height: 430px;
+
+    position: relative;
+  }
+
+
+  .welcome-image-gradient {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        #000 100%
+      );
+  }
+
+
+  .welcome-image-wrapper::after {
+    height: 40%;
+  }
+
+
+  .welcome-content {
+    padding: 20px 25px 70px;
+
+    margin-top: -40px;
+  }
+
+
+  .welcome-small-title {
+    font-size: 1.3rem;
+  }
+
+
+  .welcome-title {
+    font-size: clamp(2.8rem, 13vw, 4.5rem);
+
+    line-height: 0.95;
+  }
+
+
+  .welcome-line {
+    width: 120px;
+
+    height: 3px;
+
+    margin: 25px 0;
+  }
+
+
+  .welcome-description {
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+
+  .welcome-points {
+    margin-top: 30px;
+
+    gap: 20px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .welcome-image-wrapper {
+    height: 350px;
+  }
+
+  .welcome-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .welcome-title {
+    font-size: 2.7rem;
+  }
+
+  .welcome-description {
+    font-size: 0.9rem;
+  }
+
+  .welcome-point p {
+    font-size: 0.82rem;
+  }
+}

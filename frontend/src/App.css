@@ -19,9 +19,10 @@
 }
 .Navbar{
   position: fixed;
-  top: 0;
+  top: 2;
   left: 0;
   margin-bottom: 3rem;
   width: 100%;
   z-index: 1000;
 }
+

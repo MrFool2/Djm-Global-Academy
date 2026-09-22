@@ -63,7 +63,23 @@
 .typewriter-title {
   margin: 0;
 
-  color: #fff;
+
+
+  background:
+    linear-gradient(
+      90deg,
+      #20c9ff 0%,
+      #58d68d 35%,
+      #d4e63b 65%,
+      #ff9d00 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
 
   font-size: clamp(1.7rem, 3vw, 3rem);
 
@@ -83,7 +99,7 @@
   margin: 0.5rem 0 0;
 
   color: #d4d4d4;
-
+   
   font-size: clamp(1.3rem, 2.5vw, 2.4rem);
 
   font-weight: 400;
