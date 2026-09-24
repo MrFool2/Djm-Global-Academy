@@ -1,6 +1,6 @@
 import React from "react";
 import "./DirectorMessage.css";
-import DirectorImg from "../../Assests/Assests/DirectorImg1.jpeg";
+import DirectorImg from "../../Assests/Assests/image.png";
 const DirectorMessage = () => {
   return (
     <section className="director-section" id="director">

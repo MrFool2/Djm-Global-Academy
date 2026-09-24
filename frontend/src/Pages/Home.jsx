@@ -2,22 +2,22 @@ import OverviewFrame from "../components/OverViewFrame/OverviewFrame";
 import WelcomeSection from "../components/welcomeSection/WelcomeSection";
 import Carriculam from "../components/Carriculam/Carriculam";
 import FeatureGrid from "../components/FeatureGrid/FeaturesSection";
-import SliderVideo1 from "../Assests/ImageSlider/video/SliderVideo.mp4";
 import RewardsFinale from "../components/Rewards/ActivitiesCarousel";
 import DirectorMessage from "../components/DirectorMessage/DirectorMessage";
+import CultralVideo from "../Assests/welcomeImg/CultralVideo (1).mp4";
+import Toppers from "../Assests/welcomeImg/Toppers.mp4";
+
 const videos = [
     {
-      src: "https://hacktoskill.com/opsteam/AiBuilderCup/AiBuilderVideo.webm",
-      type: "video/webm",
-    },
-    {
-      src: "https://hacktoskill.com/opsteam/AiBuilderCup/AiBuilderVideo.webm",
-      type: "video/webm",
-    },
-    {
-      src: SliderVideo1,
+      src: Toppers,
       type: "video/mp4",
     },
+    {
+      src: CultralVideo,
+      type: "video/mp4",
+    },
+    
+    
   ];
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
         <section id="Main " className="Main">
           <OverviewFrame
             videos={videos}
-            interval={5000}
+            interval={45000}
           />
         </section>
         <section className='welcome'>
