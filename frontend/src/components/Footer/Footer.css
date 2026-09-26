@@ -1,548 +1,91 @@
 /* =========================================================
-   DJM GLOBAL ACADEMY
-   Footer Design System
-   ========================================================= */
-
-:root {
-  /* Fonts */
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-
-  --font-poppins: "Poppins", "Poppins Fallback";
-  --default-font-family: var(--font-poppins), system-ui, sans-serif;
-  --default-mono-font-family: var(--font-mono);
-
-  /* Base colors */
-  --color-black: #000;
-  --color-white: #fff;
-
-  /* Spacing */
-  --spacing: 0.25rem;
-
-  /* Containers */
-  --container-sm: 24rem;
-  --container-md: 28rem;
-  --container-lg: 32rem;
-  --container-xl: 36rem;
-  --container-2xl: 42rem;
-  --container-3xl: 51.25rem;
-  --container-4xl: 56rem;
-  --container-5xl: 64rem;
-  --container-6xl: 72rem;
-  --container-7xl: 80rem;
-
-  /* Typography */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
-  --text-6xl: 3.75rem;
-  --text-7xl: 4.5rem;
-  --text-8xl: 6rem;
-
-  --text-xs--line-height: 1;
-  --text-sm--line-height: 1.4286;
-  --text-base--line-height: 1.5;
-  --text-lg--line-height: 1.5556;
-  --text-xl--line-height: 1.4;
-  --text-2xl--line-height: 1.3333;
-  --text-3xl--line-height: 1.2;
-  --text-4xl--line-height: 1.1111;
-  --text-5xl--line-height: 1;
-  --text-6xl--line-height: 1;
-  --text-7xl--line-height: 1;
-  --text-8xl--line-height: 1;
-
-  /* Font weights */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
-
-  /* Letter spacing */
-  --tracking-tight: -0.025em;
-  --tracking-wide: 0.025em;
-  --tracking-wider: 0.05em;
-  --tracking-widest: 0.1em;
-
-  /* Line heights */
-  --leading-tight: 1.25;
-  --leading-snug: 1.375;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
-
-  /* Radius */
-  --radius: 0.625rem;
-  --radius-lg: var(--radius);
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
-
-  /* Animation */
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --default-transition-duration: 0.15s;
-  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Blur */
-  --blur-sm: 8px;
-  --blur-md: 12px;
-  --blur-2xl: 40px;
-
-  /* Aspect ratio */
-  --aspect-video: 16 / 9;
-
-  /* Theme */
-  --background: 0 0% 3%;
-  --foreground: 0 0% 98%;
-
-  --card: 0 0% 7%;
-  --card-foreground: 0 0% 98%;
-
-  --popover: 0 0% 3%;
-  --popover-foreground: 0 0% 98%;
-
-  --primary: 222 100% 60%;
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 240 5% 83%;
-
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-
-  --border: 0 0% 10%;
-  --input: 0 0% 14.9%;
-  --ring: 222 100% 65%;
-
-  --sidebar: 0 0% 3.9%;
-
-  /* Status */
-  --success: #10b981;
-  --success-foreground: #059669;
-
-  --info: #8b5cf6;
-  --info-foreground: #7c3aed;
-
-  --warning: #eab308;
-  --warning-foreground: #ca8a04;
-
-  --invert: #27272a;
-  --invert-foreground: #fafafa;
-
-  /* Code */
-  --code: #111111;
-  --code-foreground: #d1d1d1;
-
-  /* Footer-specific */
-  --footer-glow: rgba(187, 188, 190, 0.1);
-  --footer-glow-strong: rgba(195, 197, 201, 0.18);
-}
-
-/* =========================================================
-   GLOBAL RESET
-   ========================================================= */
-
-
-/* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
-.site-footer {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.footer {
+  background: #03182d;
 
-  background: #090d12;
-  color: hsl(var(--foreground));
+  color: white;
+
+  padding: 55px 6% 20px;
 }
-
-/* Soft blue glow behind footer */
-
-.site-footer::before {
-  content: "";
-  position: absolute;
-
-  width: 600px;
-  height: 350px;
-
-  top: -220px;
-  left: 10%;
-
-  background: radial-gradient(
-    ellipse,
-    var(--footer-glow-strong),
-    transparent 70%
-  );
-
-  filter: blur(40px);
-  pointer-events: none;
-}
-
-/* =========================================================
-   FOOTER CONTAINER
-   ========================================================= */
 
 .footer-container {
-  position: relative;
+  max-width: 1400px;
 
-  width: 100%;
-  max-width: var(--container-3xl);
+  margin: auto;
 
-  margin: 0 auto;
-  margin-top: 20px;
-  border-left: 0.1px solid #ffde59;
-  
-  border-right: 0.1px solid #ffde59;
-    
-
-  background:
-    radial-gradient(
-      ellipse 45% 90% at 15% 0%,
-      var(--footer-glow),
-      transparent 30%
-    );
-}
-
-/* =========================================================
-   DIVIDER
-   ========================================================= */
-
-.footer-divider {
-  justify-self: center;
-  width: 110%;
-  height: 0.5px;
-  padding: 0.5px;
-  background: #ffde59;
-}
-
-/* =========================================================
-   MAIN GRID
-   ========================================================= */
-
-.footer-grid {
   display: grid;
 
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: 1.7fr repeat(4, 1fr);
 
-  gap: 1.5rem;
+  gap: 40px;
 
-  padding: 2rem 1.5rem;
+  padding-bottom: 40px;
 }
-
-/* =========================================================
-   BRAND SECTION
-   ========================================================= */
-
-.footer-brand {
-  grid-column: span 4;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 1rem;
-
-  padding-top: 0.25rem;
-}
-
-/* =========================================================
-   LOGO
-   ========================================================= */
 
 .footer-logo {
-  width: max-content;
-
-  display: inline-flex;
-  align-items: center;
-
-  gap: 0.75rem;
-
-  color: hsl(var(--foreground));
-  text-decoration: none;
-
-  transition:
-    opacity var(--default-transition-duration)
-      var(--default-transition-timing-function),
-    transform var(--default-transition-duration)
-      var(--default-transition-timing-function);
-}
-
-.footer-logo:hover {
-  opacity: 0.85;
-  transform: translateY(-1px);
-}
-
-/* DJM logo square */
-
-.footer-logo-mark {
-  width: 2.25rem;
-  height: 2.25rem;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
 
-  border-radius: var(--radius-lg);
-
-  background:
-    linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      #60a5fa
-    );
-
-  color: var(--color-white);
-
-  font-size: 0.75rem;
-  font-weight: var(--font-weight-black);
-
-  letter-spacing: -0.03em;
-
-  box-shadow:
-    0 0 20px rgba(37, 99, 235, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.footer-logo span {
-  font-size: var(--text-lg);
-  font-weight: var(--font-weight-semibold);
-
-  letter-spacing: var(--tracking-tight);
-
-  color: hsl(var(--foreground));
-}
-
-/* =========================================================
-   DESCRIPTION
-   ========================================================= */
-
-.footer-description {
-  max-width: 390px;
-
-  margin: 0;
-
-  color: hsl(var(--muted-foreground));
-
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
-
-  font-weight: var(--font-weight-normal);
-}
-
-/* =========================================================
-   SOCIAL ICONS
-   ========================================================= */
-
-.footer-socials {
-  display: flex;
   align-items: center;
 
-  gap: 0.5rem;
+  gap: 10px;
 
-  margin-top: 0.25rem;
+  margin-bottom: 18px;
 }
 
-.footer-social {
-  width: 2.125rem;
-  height: 2.125rem;
+.footer-brand > p {
+  color: #7990a7;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 10px;
 
-  border: 1px solid hsl(var(--border));
+  line-height: 1.6;
 
-  border-radius: 0.5rem;
-
-  background: rgba(255, 255, 255, 0.025);
-
-  color: hsl(var(--muted-foreground));
-
-  text-decoration: none;
-
-  backdrop-filter: blur(var(--blur-sm));
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  max-width: 250px;
 }
-
-.footer-social:hover {
-  background: rgba(37, 99, 235, 0.12);
-
-  border-color: hsl(var(--ring));
-
-  color: #60a5fa;
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 6px 20px rgba(37, 99, 235, 0.12);
-}
-
-.footer-social svg {
-  display: block;
-}
-
-/* =========================================================
-   FOOTER COLUMNS
-   ========================================================= */
 
 .footer-column {
-  grid-column: span 1;
-
-  width: 100%;
-}
-
-.footer-column-title {
-  display: block;
-
-  color: hsl(var(--muted-foreground));
-
-  font-size: var(--text-xs);
-
-  font-weight: var(--font-weight-medium);
-
-  letter-spacing: var(--tracking-wide);
-
-  text-transform: uppercase;
-}
-
-.footer-links {
   display: flex;
+
   flex-direction: column;
 
-  gap: 0.5rem;
-
-  margin-top: 0.75rem;
+  gap: 10px;
 }
 
-.footer-links a {
-  width: max-content;
+.footer-column h4 {
+  font-size: 11px;
 
-  color: hsl(var(--foreground));
+  color: var(--yellow);
 
-  font-size: var(--text-sm);
-
-  line-height: var(--leading-normal);
-
-  text-decoration: none;
-
-  opacity: 0.85;
-
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  margin-bottom: 7px;
 }
 
-.footer-links a:hover {
-  color: #60a5fa;
-  opacity: 1;
+.footer-column a {
+  font-size: 9px;
 
-  transform: translateX(2px);
+  color: #8197ad;
+
+  transition: 0.2s;
 }
 
-/* =========================================================
-   FOOTER BOTTOM
-   ========================================================= */
+.footer-column a:hover {
+  color: white;
+}
 
 .footer-bottom {
-  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   display: flex;
-  align-items: center;
-  justify-content: center;
 
-  padding: 1.25rem 1.5rem;
-}
+  justify-content: space-between;
 
-.footer-bottom p {
-  margin: 0;
+  color: #60778e;
 
-  color: hsl(var(--muted-foreground));
-
-  font-size: var(--text-sm);
-
-  font-weight: var(--font-weight-light);
-
-  text-align: center;
-
-  opacity: 0.75;
-}
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 768px) {
-  .footer-container {
-    border-left: none;
-    border-right: none;
-  }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 2rem 1.25rem;
-
-    padding: 1.75rem 1.25rem;
-  }
-
-  .footer-brand {
-    grid-column: span 2;
-  }
-
-  .footer-column {
-    grid-column: span 1;
-  }
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-
-    gap: 1.75rem;
-
-    padding: 1.5rem 1rem;
-  }
-
-  .footer-brand,
-  .footer-column {
-    grid-column: span 1;
-  }
-
-  .footer-description {
-    max-width: 100%;
-  }
-
-  .footer-logo span {
-    font-size: var(--text-base);
-  }
-
-  .footer-bottom {
-    padding: 1rem;
-  }
-
-  .footer-bottom p {
-    font-size: var(--text-xs);
-  }
+  font-size: 8px;
 }
