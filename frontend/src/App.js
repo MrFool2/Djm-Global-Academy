@@ -5,10 +5,13 @@ import Footer from "./components/Footer/Footer";
 import Header from "./Pages/Header";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Activity from "./Pages/Activity"
+
 import Academics from "./Pages/Academics";
 import Facilites from './Pages/Facilites';
 import ContactUs from './Pages/ContectUs';
+import Updates from './Pages/Updates';
+import Admission from './Pages/Admission';
+import Gallery from './Pages/Gallery';
 
 function App() {
   return (
@@ -16,12 +19,14 @@ function App() {
 
       <Header />
       {/* ================= HERO ================= */}
-      <Hero />
+      
      <Routes>
           <Route path='/' element={<Home />}/>
            <Route path='/about' element={<About />}/>
-           <Route path='/activity' element={<Activity />}/>
+           <Route path='/gallery' element={<Gallery/>}/>
            <Route path='/academics' element={<Academics/>}/>
+           <Route path='/admission' element={<Admission />}/>
+           <Route path='/Updates' element={<Updates />}/>
            <Route path='/facities' element={<Facilites/>}/>
            <Route path='/contact' element={<ContactUs/>}/>
            <Route path='*' element={<Home />}/>

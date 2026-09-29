@@ -1,0 +1,730 @@
+/* =========================================
+   PAGE
+========================================= */
+
+.updates-page {
+  min-height: 100vh;
+  background: #f6f8f7;
+  color: #14231c;
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.updates-container {
+  width: min(1200px, 90%);
+
+  margin: 80px auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.updates-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 30px;
+
+  margin-bottom: 35px;
+}
+
+
+.section-label {
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+
+  color: #159447;
+}
+
+
+.updates-heading h2 {
+  font-size: clamp(30px, 4vw, 48px);
+
+  margin: 8px 0 0;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* =========================================
+   LEGEND
+========================================= */
+
+.update-legend {
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+
+.update-legend div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 13px;
+
+  color: #65716b;
+}
+
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+}
+
+
+.current-dot {
+  background: #21b453;
+}
+
+
+.past-dot {
+  background: #aeb6b1;
+}
+
+
+.future-dot {
+  background: #e4b63c;
+}
+
+
+/* =========================================
+   MONTH FILTER
+========================================= */
+
+.month-filter {
+  display: flex;
+
+  gap: 8px;
+
+  overflow-x: auto;
+
+  padding: 8px;
+
+  margin-bottom: 45px;
+
+  background: white;
+
+  border: 1px solid #e4e9e6;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 30px rgba(20, 35, 28, 0.04);
+}
+
+
+.month-filter button {
+  border: none;
+
+  background: transparent;
+
+  padding: 11px 17px;
+
+  border-radius: 12px;
+
+  color: #64716a;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+
+  white-space: nowrap;
+}
+
+
+.month-filter button:hover {
+  background: #edf7ef;
+
+  color: #16883f;
+}
+
+
+.month-filter button.active {
+  background: #14231c;
+
+  color: white;
+
+  box-shadow: 0 5px 15px rgba(20,35,28,0.2);
+}
+
+
+/* =========================================
+   UPDATE LIST
+========================================= */
+
+.updates-list {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.update-card {
+  display: grid;
+
+  grid-template-columns: 190px 30px 1fr;
+
+  align-items: center;
+
+  min-height: 120px;
+
+  background: white;
+
+  border: 1px solid #e6ebe8;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.update-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 40px rgba(20, 35, 28, 0.09);
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.update-date {
+  padding: 25px;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+
+.date-month {
+  font-size: 13px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+.update-date strong {
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   TIMELINE DOT
+========================================= */
+
+.update-line {
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+.update-line::before {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+
+  height: 100%;
+
+  background: #e4e9e6;
+}
+
+
+.update-line span {
+  position: relative;
+
+  z-index: 2;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: #b7c0bb;
+
+  border: 4px solid white;
+
+  box-sizing: content-box;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.update-content {
+  padding: 25px 30px;
+}
+
+
+.update-content h3 {
+  margin: 8px 0 6px;
+
+  font-size: 19px;
+
+  line-height: 1.4;
+
+  color: #25342c;
+}
+
+
+.update-content p {
+  margin: 0;
+
+  color: #849089;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   STATUS BADGE
+========================================= */
+
+.status-badge {
+  display: inline-flex;
+
+  padding: 5px 9px;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CURRENT
+========================================= */
+
+.update-card.current {
+  border: 1px solid #72d68c;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f0fff3,
+      #ffffff
+    );
+
+  box-shadow:
+    0 10px 35px rgba(33, 180, 83, 0.1);
+}
+
+
+.update-card.current .update-date {
+  background: #e2f9e7;
+}
+
+
+.update-card.current .date-month {
+  color: #16883f;
+}
+
+
+.update-card.current .update-line span {
+  background: #21b453;
+}
+
+
+.update-card.current .status-badge {
+  background: #d9f8e1;
+
+  color: #15853d;
+}
+
+
+/* =========================================
+   FUTURE
+========================================= */
+
+.update-card.future {
+  border-left: 4px solid #e4b63c;
+}
+
+
+.update-card.future .date-month {
+  color: #b18416;
+}
+
+
+.update-card.future .update-line span {
+  background: #e4b63c;
+}
+
+
+.update-card.future .status-badge {
+  background: #fff4cf;
+
+  color: #9a7410;
+}
+
+
+/* =========================================
+   PAST
+========================================= */
+
+.update-card.past {
+  opacity: 0.72;
+
+  background: #f5f6f5;
+
+  border-color: #e2e5e3;
+}
+
+
+.update-card.past .date-month {
+  color: #7c8580;
+}
+
+
+.update-card.past .update-line span {
+  background: #aeb6b1;
+}
+
+
+.update-card.past .status-badge {
+  background: #e5e8e6;
+
+  color: #68716c;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .updates-hero {
+    min-height: 300px;
+  }
+
+  .updates-container {
+    width: 92%;
+
+    margin: 55px auto;
+  }
+
+  .updates-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .update-legend {
+    width: 100%;
+  }
+
+  .update-card {
+    grid-template-columns: 80px 20px 1fr;
+
+    border-radius: 16px;
+  }
+
+  .update-date {
+    padding: 18px 10px;
+  }
+
+  .update-date strong {
+    font-size: 13px;
+  }
+
+  .date-month {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+  }
+
+  .update-content {
+    padding: 20px 15px;
+  }
+
+  .update-content h3 {
+    font-size: 15px;
+  }
+
+  .update-content p {
+    font-size: 11px;
+  }
+
+  .status-badge {
+    font-size: 8px;
+  }
+}
+/* =========================================
+   MONTH GROUP
+========================================= */
+
+.month-group {
+  margin-bottom: 40px;
+  padding: 28px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   MONTH HEADER
+========================================= */
+
+.month-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.month-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.month-title h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.month-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+
+/* =========================================
+   STATUS COLORS
+========================================= */
+
+.month-group.current {
+  border-left: 5px solid #22c55e;
+}
+
+.month-group.current .month-status-dot {
+  background: #22c55e;
+}
+
+.month-group.past {
+  border-left: 5px solid #9ca3af;
+}
+
+.month-group.past .month-status-dot {
+  background: #9ca3af;
+}
+
+.month-group.future {
+  border-left: 5px solid #f59e0b;
+}
+
+.month-group.future .month-status-dot {
+  background: #f59e0b;
+}
+
+
+/* =========================================
+   MONTH STATUS
+========================================= */
+
+.month-status {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.month-group.current .month-status {
+  color: #16a34a;
+}
+
+.month-group.past .month-status {
+  color: #6b7280;
+}
+
+.month-group.future .month-status {
+  color: #d97706;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.month-events {
+  display: flex;
+  flex-direction: column;
+
+  /* GAP BETWEEN EACH EVENT */
+  gap: 18px;
+}
+
+
+/* =========================================
+   EVENT ROW
+========================================= */
+
+.event-row {
+  display: grid;
+
+  /*
+    DATE COLUMN + EVENT COLUMN
+  */
+  grid-template-columns: 150px minmax(0, 1fr);
+
+  column-gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.event-date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 18px 0;
+
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-align: right;
+}
+
+.event-date span {
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.event-card-wrapper {
+  min-width: 0;
+}
+
+
+/*
+  Make sure your reusable UpdateCard
+  fills the available width.
+*/
+
+.event-card-wrapper .update-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .month-group {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .month-header {
+    align-items: flex-start;
+  }
+
+  .month-title h3 {
+    font-size: 22px;
+  }
+
+  .event-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .event-date {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .event-date span {
+    font-size: 13px;
+  }
+
+  .month-events {
+    gap: 14px;
+  }
+
+}

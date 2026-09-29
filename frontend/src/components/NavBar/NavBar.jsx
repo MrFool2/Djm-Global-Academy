@@ -19,7 +19,7 @@ const NavBar = () => {
             <NavLink to={"/academics"} >Academics</NavLink>
             <NavLink to={"/admissions"} >Admissions</NavLink>
             <NavLink to={"/results"} >Results</NavLink>
-            <NavLink to={"/campus"} >Campus</NavLink>
+            <a href="/#campus">Campus</a>
             <NavLink to={"/gallery"} >Gallery</NavLink>
             <NavLink to={"/Updates"} >Updates</NavLink>
             <NavLink to={"/contact"} >Contact</NavLink>

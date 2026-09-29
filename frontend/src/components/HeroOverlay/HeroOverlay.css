@@ -1,0 +1,73 @@
+
+.updates-hero {
+  min-height: 660px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 30, 20, 0.94),
+      rgba(5, 30, 20, 0.65),
+      rgba(5, 30, 20, 0.3)
+    ),
+    url("../../Assests/Gallery/BuildingImg/SchoolBuilding.jpeg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+.updates-hero-overlay {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+
+.updates-eyebrow {
+  display: inline-block;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #a7f3b7;
+
+  margin-bottom: 15px;
+}
+
+
+.updates-hero h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 78px);
+
+  line-height: 1;
+
+  color: white;
+
+  letter-spacing: -3px;
+}
+
+
+.updates-hero h1 span {
+  color: #8bea9c;
+}
+
+
+.updates-hero p {
+  max-width: 620px;
+
+  margin-top: 25px;
+
+  color: rgba(255,255,255,0.8);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+

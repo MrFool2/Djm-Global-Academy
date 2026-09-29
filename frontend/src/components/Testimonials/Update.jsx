@@ -1,25 +1,12 @@
 import { NavLink } from "react-router-dom";
-import UpdateData from "../../Data/UpdateData";
-function UpdateCard({ type, date, title }) {
-  return (
-    <div className="update-item">
-
-      <span className={`update-tag ${type.toLowerCase()}`}>
-        {type}
-      </span>
-
-      <span className="update-date">
-        {date}
-      </span>
-
-      <strong>
-        {title}
-      </strong>
-
-    </div>
-  );
-}
+import UpdateCard from "./UpdateCard";
+import SchoolUpdates from "../../Data/SchoolUpdates";
 export default function Update() {
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let monthIndex = (new Date().getMonth());
+  let monthName = monthNames[monthIndex];
+  let Data=SchoolUpdates[monthName];
+
   return (
     
         <div id="updates" className="updates">
@@ -36,13 +23,15 @@ export default function Update() {
 
           </div>
             {
-                UpdateData.map((item)=>(
+                Data.map((item)=>(
                     <UpdateCard 
                         type={item.type}
                         date={item.date}
                         title={item.title}
                     />
                 ))
+
+                
             }
 
 

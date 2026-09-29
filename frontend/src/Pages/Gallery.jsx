@@ -22,6 +22,7 @@ import img19 from "../Assests/Gallery/Toppers/ToppersImg1.jpeg";
 import img20 from "../Assests/Gallery/LabImg/LabImg1.jpeg";
 import img21 from "../Assests/Gallery/BuildingImg/SchoolBuilding.jpeg";
 import img22 from "../Assests/Gallery/BuildingImg/SchoolBuildingImg7.png";
+import HeroOverlay from "../components/HeroOverlay/HeroOverlay";
 
 const items= [
    { id:"1",
@@ -158,27 +159,33 @@ const items= [
 
 ];
 
-function Activity()  { 
+function Gallery()  { 
 
   return (
+    <>
+      <HeroOverlay
+        title={"DJM GLOBAL ACADEMY"}
+        page={"Gallery"}
+        text={"Stay updated with important academic activities, celebrations, examinations and school events."}
+      />
+      <div className="Activity" style={{"margin-top":"20px"}}>
+        <div className="Activity-gallery">
+            <Masonry
+              items= { items}
+              ease="power3.out"
+              duration= { 0.6}
+              stagger= { 0.05}
+              animateFrom="bottom"
+              scaleOnHover
+              hoverScale= { 0.95}
+              blurToFocus
+              colorShiftOnHover= {false}
+              />
 
-    <div className="Activity">
-      <div className="Activity-gallery">
-          <Masonry
-            items= { items}
-            ease="power3.out"
-            duration= { 0.6}
-            stagger= { 0.05}
-            animateFrom="bottom"
-            scaleOnHover
-            hoverScale= { 0.95}
-            blurToFocus
-            colorShiftOnHover= {false}
-            />
-
-          </div>
-    </div>
+            </div>
+      </div>
+    </>
   );
 }
 
-export default Activity;
+export default Gallery;

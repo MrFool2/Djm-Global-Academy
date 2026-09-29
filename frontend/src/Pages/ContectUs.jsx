@@ -1,5 +1,6 @@
 import ContactMap from "../components/Contact-Us/ContactMap";
 import Contact  from "../components/Contact-Us/ContactUs";
+import HeroOverlay from "../components/HeroOverlay/HeroOverlay";
 export default function ContactUs() {
   const styles = {
 
@@ -7,9 +8,16 @@ export default function ContactUs() {
      gap:'20px'
   };
   return (
-    <section className="ContactUs"  style={styles}>
-      <Contact />
-      <ContactMap />
-    </section>
+    <>
+      <HeroOverlay
+              title={"DJM GLOBAL ACADEMY"}
+              page={"Contact Us"}
+              text={"Stay updated with important academic activities, celebrations, examinations and school events."}
+            />
+      <section className="ContactUs"  style={styles}>
+        <Contact />
+        <ContactMap />
+      </section>
+    </>
   )
 }
