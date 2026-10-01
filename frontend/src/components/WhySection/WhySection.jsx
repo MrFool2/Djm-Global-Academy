@@ -25,7 +25,7 @@ export default function WhySection() {
               to shape future-ready leaders.
             </p>
 
-            <NavLink to={"/campus"} className="btn btn-yellow">
+            <NavLink to={"/#campus"} className="btn btn-yellow">
               Our Facilities <span>→</span>
             </NavLink>
 

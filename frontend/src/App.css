@@ -296,7 +296,7 @@ h4 {
 
   inset: 0;
 
-  background-size: cover;
+  background-size:cover;
   background-position: center;
 
   opacity: 0;
@@ -528,6 +528,7 @@ h4 {
 .hero-slogan span {
   color: var(--yellow);
 }
+  
 
 
 /* =========================================================
@@ -1706,7 +1707,7 @@ h4 {
   .nav-links a {
     font-size: 9px;
   }
-
+    
   .about {
     grid-template-columns: 1fr 1fr;
   }
@@ -1750,6 +1751,21 @@ h4 {
   .hero {
     min-height: 720px;
   }
+  .hero-slide {
+  min-height: 500px;
+    min-width: 500px;
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+
+  overflow: hidden;
+  }
 
   .hero-container {
     padding-top: 100px;
@@ -1763,7 +1779,7 @@ h4 {
 
   .hero-stat:nth-child(2) {
     border-right: 0;
-  }
+  } 
 
   .trust-bar {
     grid-template-columns: repeat(2, 1fr);
@@ -1838,9 +1854,7 @@ h4 {
     width: 90%;
   }
 
-  .logo {
-    min-width: auto;
-  }
+
 
   .hero {
     min-height: 750px;
@@ -2016,20 +2030,5 @@ h4 {
     font-size: 31px;
   }
 
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 30px;
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-
-    gap: 8px;
-  }
 
 }

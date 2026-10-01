@@ -22,18 +22,20 @@ export default function Journey() {
 
 
         <div className="journey-line">
+
             {
-                JourneyData.map((item)=>(
-                    <JourneyCard 
-                        icon={item.icon}
-                        number={item.number}
-                        title={item.title}
-                        text={item.text}
-                    />
-                ))
+              JourneyData.map((item)=>(
+                <JourneyCard 
+                icon={item.icon}
+                number={item.number}
+                title={item.title}
+                text={item.text}
+                />
+              ))
             }
+          </div>
           
-        </div>
+        
 
       </section>
 

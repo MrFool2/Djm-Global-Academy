@@ -1,6 +1,6 @@
 import {Route,Routes} from 'react-router-dom';
 import "./App.css";
-import Hero from './components/Hero/Hero';
+
 import Footer from "./components/Footer/Footer";
 import Header from "./Pages/Header";
 import Home from "./Pages/Home";
@@ -25,9 +25,8 @@ function App() {
            <Route path='/about' element={<About />}/>
            <Route path='/gallery' element={<Gallery/>}/>
            <Route path='/academics' element={<Academics/>}/>
-           <Route path='/admission' element={<Admission />}/>
+           <Route path='/admissions' element={<Admission />}/>
            <Route path='/Updates' element={<Updates />}/>
-           <Route path='/facities' element={<Facilites/>}/>
            <Route path='/contact' element={<ContactUs/>}/>
            <Route path='*' element={<Home />}/>
       </Routes>

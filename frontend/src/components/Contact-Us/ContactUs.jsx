@@ -30,14 +30,14 @@ export default function ContactUs() {
             <div className="contact-item">
               <span>📞</span>
               <p>
-                +91 XXXXX XXXXX
+                +91 9410450524
               </p>
             </div>
 
             <div className="contact-item">
               <span>✉</span>
               <p>
-                info@djmglobalacademy.in
+                djmglobalacademy@gmail.com
               </p>
             </div>
 

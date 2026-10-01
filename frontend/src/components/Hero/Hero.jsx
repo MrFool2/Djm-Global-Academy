@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import Stat from '../Stat/State';
 import HeroData from '../../Data/HeroData';
 import heroImages from "../../Data/HeroImages";
+import { NavLink } from 'react-router-dom';
+import HeroContainer from './HeroContainer';
 
 
 export default function Hero() {
@@ -37,36 +39,40 @@ export default function Hero() {
         <div className="hero-overlay"></div>
 
         <div className="hero-container">
-
-          <div className="hero-content">
-
-            <div className="school-tag">
-              CBSE AFFILIATED SCHOOL
-            </div>
-
-            <h1>
-              Where Curiosity
-              <br />
-              Meets <span>Excellence.</span>
-            </h1>
-
-            <p>
-              Building knowledge, character and confidence
-              <br />
-              for a brighter tomorrow.
-            </p>
-
-            <div className="hero-buttons">
-              <a href="#about" className="btn btn-yellow">
-                Explore Our School <span>→</span>
-              </a>
-
-              <a href="#admissions" className="btn btn-outline">
-                Admission 2026–27
-              </a>
-            </div>
-
-          </div>
+           <HeroContainer
+                tag="CBSE AFFILIATED SCHOOL"
+                title={
+                  <>
+                    Where Curiosity
+                    <br />
+                    Meets <span>Excellence.</span>
+                  </>
+                }
+                text={
+                  <>
+                    Building knowledge, character and confidence
+                    <br />
+                    for a brighter tomorrow.
+                  </>
+                }
+                buttons={[
+                  {
+                    link: "/about",
+                    classname: "btn btn-yellow",
+                    text: (
+                      <>
+                        Explore Our School <span>→</span>
+                      </>
+                    ),
+                  },
+                  {
+                    link: "/admissions",
+                    classname: "btn btn-outline",
+                    text: "Admission 2026–27",
+                  },
+                ]}
+              />
+          
 
 
           {/* HERO STATS */}

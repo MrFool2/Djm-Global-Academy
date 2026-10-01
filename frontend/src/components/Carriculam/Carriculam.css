@@ -1,521 +1,533 @@
 /* =========================================================
-   PARTICIPANTS SECTION
-   ========================================================= */
+   CURRICULUM SECTION
+========================================================= */
 
-.participants-section {
-  position: relative;
+.curriculum-section {
   width: 100%;
-
-  padding: 3rem 0;
-
-  background: #090d12;
-  color: #fff;
-
-  overflow: hidden;
+  padding: 100px 0;
+  background: #f5f9fc;
+  color: #092d57;
 }
 
-/* Subtle background glow */
-
-.participants-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 650px;
-  height: 350px;
-
-  top: -200px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  background: radial-gradient(
-    ellipse,
-    rgba(50, 120, 255, 0.12),
-    transparent 70%
-  );
-
-  filter: blur(45px);
-
-  pointer-events: none;
-}
-
-.participants-container {
-  position: relative;
-
-  width: 100%;
-  max-width: 1600px;
-
+.curriculum-container {
+  width: min(1180px, calc(100% - 60px));
   margin: 0 auto;
-
-  padding: 0 20px;
 }
+
 
 /* =========================================================
-   TYPEWRITER
-   ========================================================= */
+   HEADER
+========================================================= */
 
-.typewriter-lockup {
-  margin-bottom: 2.5rem;
-  justify-items: center;
+.curriculum-header {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 50px;
 }
 
-.typewriter-title {
+.curriculum-kicker {
+  display: inline-block;
+  margin-bottom: 13px;
+
+  color: #1764a8;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2.2px;
+}
+
+.curriculum-header h2 {
+  max-width: 650px;
   margin: 0;
 
+  color: #092d57;
 
-
-  background:
-    linear-gradient(
-      90deg,
-      #20c9ff 0%,
-      #58d68d 35%,
-      #d4e63b 65%,
-      #ff9d00 100%
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  color: transparent;
-
-  font-size: clamp(1.7rem, 3vw, 3rem);
-
-  font-weight: 600;
-
-  line-height: 1.15;
-  
-  letter-spacing: -0.035em;
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.02;
+  letter-spacing: -1.5px;
 }
 
-.typewriter-line {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-
-  margin: 0.5rem 0 0;
-
-  color: #d4d4d4;
-   
-  font-size: clamp(1.3rem, 2.5vw, 2.4rem);
-
-  font-weight: 400;
-
-  line-height: 1.25;
-
-  letter-spacing: -0.02em;
-
-  min-height: 1.3em;
+.curriculum-header h2 span {
+  color: #1764a8;
 }
 
-/* Cursor */
+.curriculum-header > p {
+  margin: 0;
+  max-width: 440px;
 
-.typewriter-title__cursor {
-  display: inline-block;
+  color: #6d8093;
 
-  width: 2px;
-  height: 1em;
-
-  margin-left: 5px;
-
-  vertical-align: -0.12em;
-
-  background: #fff;
-
-  animation: typewriterBlink 0.8s steps(1) infinite;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
-@keyframes typewriterBlink {
-  0%,
-  45% {
-    opacity: 1;
-  }
-
-  46%,
-  100% {
-    opacity: 0;
-  }
-}
 
 /* =========================================================
-   GRID
-   ========================================================= */
+   CURRICULUM CARDS
+========================================================= */
 
-.audience-grid {
-  width: 100%;
-}
-
-.audience-carousel {
-    
-  display: flex;
-  justify-content: center;
-  
-
+.curriculum-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
-/* =========================================================
-   CARD
-   ========================================================= */
-
-.audience-card {
+.curriculum-card {
   position: relative;
 
-  min-height: 390px;
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2eaf1;
+  border-radius: 14px;
 
   overflow: hidden;
 
-  padding: 30px;
-
-  border: 1px solid #f7e6051f;
-
-  border-radius: 18px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.055),
-      rgba(255, 255, 255, 0.015)
-    );
-
-  isolation: isolate;
-
   transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.audience-card:hover {
-  transform: translateY(-5px);
-
-  border-color: #ffde59;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(50, 100, 255, 0.08);
-}
-
-/* =========================================================
-   CARD IMAGES
-   ========================================================= */
-
-.audience-card__pixels {
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  opacity: 0.35;
-
-  mix-blend-mode: screen;
-
-  pointer-events: none;
-
-  z-index: -2;
-}
-
-.audience-card__glow {
-  position: absolute;
-
-  right: -20%;
-  bottom: -20%;
-
-  width: 80%;
-  height: 80%;
-
-  object-fit: contain;
-
-  opacity: 0.45;
-
-  mix-blend-mode: screen;
-
-  pointer-events: none;
-
-  z-index: -1;
-
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
-}
-
-.audience-card:hover .audience-card__glow {
-  transform: scale(1.08);
-
-  opacity: 0.6;
-}
-
-/* People image */
-
-.audience-card__people {
-  position: absolute;
-
-  right: -15px;
-  bottom: -5px;
-
-  width: 55%;
-  max-height: 90%;
-
-  object-fit: contain;
-  object-position: bottom right;
-
-  z-index: 0;
-
-  pointer-events: none;
-
-  opacity: 0.9;
-
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
-}
-
-.audience-card:hover .audience-card__people {
-  transform: scale(1.03);
-
-  opacity: 1;
-}
-
-/* =========================================================
-   CARD CONTENT
-   ========================================================= */
-
-.audience-card__content {
-  position: relative;
-
-  z-index: 2;
-  justify-content: center;
-
-  max-width: 75%;
-}
-
-.audience-card__title {
-  margin: 0 0 14px;
-
-  color: #fff;
-
-  font-size: clamp(1.3rem, 2vw, 3rem);
-
-  font-weight: 500;
-
-  line-height: 1.2;
-
-  letter-spacing: -0.025em;
-  
-}
-
-.audience-card__body {
-  margin: 0;
-
-  max-width: 460px;
-
-  color: #b8b8b8;
-
-  font-size: 18px;
-
-  line-height: 1.65;
-
-  font-weight: 400;
-}
-
-/* Dark gradient over image */
-
-.audience-card::after {
+.curriculum-card::before {
   content: "";
 
   position: absolute;
 
-  inset: 0;
+  top: 0;
+  left: 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.05) 0%,
-      rgba(0, 0, 0, 0.12) 35%,
-      rgba(0, 0, 0, 0.75) 100%
-    );
+  width: 100%;
+  height: 4px;
 
-  z-index: -1;
+  background: #ffd229;
 
-  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
 }
+
+.curriculum-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #d3e1eb;
+
+  box-shadow:
+    0 20px 45px rgba(9, 45, 87, 0.09);
+}
+
+.curriculum-card:hover::before {
+  transform: scaleX(1);
+}
+
 
 /* =========================================================
-   DOTS
-   ========================================================= */
+   CARD TOP
+========================================================= */
 
-.carousel-dots {
+.curriculum-card-top {
   display: flex;
-
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  gap: 8px;
-
-  margin-top: 20px;
+  margin-bottom: 24px;
 }
 
-.carousel-dot {
-  width: 7px;
-  height: 7px;
+.curriculum-number {
+  width: 42px;
+  height: 42px;
 
-  padding: 0;
-
-  border: 0;
+  display: grid;
+  place-items: center;
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.3);
+  background: #092d57;
+  color: #ffd229;
 
-  cursor: pointer;
-
-  transition:
-    width 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
+  font-size: 11px;
+  font-weight: 900;
 }
 
-.carousel-dot:hover {
-  background: rgba(255, 255, 255, 0.65);
+.curriculum-classes {
+  padding: 7px 12px;
 
-  transform: scale(1.15);
+  border-radius: 20px;
+
+  background: #eef6fc;
+  color: #1764a8;
+
+  font-size: 10px;
+  font-weight: 800;
 }
 
-.carousel-dot.is-active {
-  width: 24px;
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.curriculum-card h3 {
+  margin: 0 0 10px;
+
+  color: #092d57;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.curriculum-description {
+  min-height: 65px;
+
+  margin: 0 0 22px;
+
+  color: #738397;
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SUBJECT LIST
+========================================================= */
+
+.subject-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+.subject-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #526a80;
+
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.subject-item span {
+  width: 17px;
+  height: 17px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #fff3b7;
+  color: #092d57;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   SUBJECT HEADING
+========================================================= */
+
+.subjects-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+
+  gap: 50px;
+
+  align-items: end;
+
+  margin-top: 90px;
+  margin-bottom: 30px;
+
+  padding-top: 60px;
+
+  border-top: 1px solid #dfe8ef;
+}
+
+.subjects-heading h3 {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.subjects-heading h3 span {
+  color: #1764a8;
+}
+
+.subjects-heading p {
+  margin: 0;
+
+  color: #718297;
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SUBJECT HIGHLIGHTS
+========================================================= */
+
+.subject-highlight-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.subject-highlight {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2eaf1;
+  border-radius: 10px;
+
+  transition: 0.3s ease;
+}
+
+.subject-highlight:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 30px rgba(9, 45, 87, 0.07);
+}
+
+.subject-icon {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
 
   border-radius: 10px;
 
-  background: #fff;
+  background: #eaf5fd;
+
+  color: #1764a8;
+
+  font-size: 19px;
+  font-weight: 700;
 }
 
-/* =========================================================
-   DISCLAIMER
-   ========================================================= */
+.subject-highlight h4 {
+  margin: 2px 0 6px;
 
-.participants-disclaimer {
-  max-width: 1103px;
-
-  margin: 2rem auto 0;
-
-  color: #d4d4d4;
+  color: #092d57;
 
   font-size: 12px;
-
-  line-height: 1.44;
-
-  text-align: center;
 }
+
+.subject-highlight p {
+  margin: 0;
+
+  color: #7a8999;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+.subject-arrow {
+  position: absolute;
+
+  right: 16px;
+  top: 18px;
+
+  color: #b4c2ce;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.subject-highlight:hover .subject-arrow {
+  color: #1764a8;
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.curriculum-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 30px;
+
+  padding: 20px 24px;
+
+  background: #092d57;
+
+  border-radius: 12px;
+
+  color: white;
+}
+
+.curriculum-note-icon {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ffd229;
+
+  color: #092d57;
+
+  font-size: 17px;
+}
+
+.curriculum-note strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 12px;
+}
+
+.curriculum-note p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 1000px) {
-  .audience-carousel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 900px) {
+
+  .curriculum-container {
+    width: min(92%, 760px);
   }
 
-  .audience-card:last-child {
-    display: none;
+  .curriculum-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .audience-card {
-    min-height: 360px;
+  .curriculum-cards {
+    grid-template-columns: 1fr;
   }
+
+  .curriculum-card {
+    padding: 25px;
+  }
+
+  .subject-highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
+
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 700px) {
-  .participants-section {
-    padding: 3rem 0;
-  }
+@media (max-width: 600px) {
 
-  .participants-container {
-    padding: 0 16px;
+  .curriculum-section {
+    padding: 70px 0;
   }
 
-  .typewriter-lockup {
-    margin-bottom: 1.75rem;
+  .curriculum-container {
+    width: calc(100% - 32px);
   }
 
-  
-  .audience-card {
-      display: flex;
-      
-      min-height: 400px;
-      
-      padding: 24px;
-      
-      border-radius: 16px;
-    }
-    
-    .audience-carousel {
-      display: flex;
-      flex-flow: column ;
-      align-items: center;
-      
-    }
-  .audience-card {
-    width: 80%;
-  }
-  .acudience-card__title {
-    font-size: clamp(1.3rem, 6vw, 3rem);
-  }
-  .audience-card__content {
-    max-width: 85%;
-    
+  .curriculum-header h2 {
+    font-size: 39px;
   }
 
-  .audience-card__people {
-    width: 65%;
+  .curriculum-header > p {
+    font-size: 12px;
   }
 
-  .audience-card__body {
-    font-size: 1.5rem;
+  .curriculum-card {
+    padding: 22px;
   }
 
-  .participants-disclaimer {
-    margin-top: 1.75rem;
-
-    text-align: left;
+  .curriculum-card h3 {
+    font-size: 20px;
   }
+
+  .subject-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .subjects-heading {
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    margin-top: 65px;
+    padding-top: 45px;
+  }
+
+  .subjects-heading h3 {
+    font-size: 28px;
+  }
+
+  .subject-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-note {
+    align-items: flex-start;
+    padding: 18px;
+  }
+
 }
+
 
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 450px) {
-  .participants-container {
-    padding: 0 14px;
+@media (max-width: 380px) {
+
+  .curriculum-header h2 {
+    font-size: 34px;
   }
 
-  .audience-card {
-    min-height: 370px;
-
-    padding: 20px;
+  .subject-list {
+    grid-template-columns: 1fr;
   }
 
-  .audience-card__content {
-    max-width: 100%;
+  .curriculum-card-top {
+    margin-bottom: 18px;
   }
 
-  .audience-card__title {
-    font-size: 1.35rem;
-  }
-
-  .audience-card__people {
-    width: 70%;
-  }
 }

@@ -31,6 +31,7 @@ const JourneyData=[
         icon:"📈",
         title:"Future Ready",
         text:"Confident, capable, compassionate"
-    }
+    },
+
 ];
 export default JourneyData;
